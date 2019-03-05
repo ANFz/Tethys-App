@@ -1,0 +1,51 @@
+{% extends "anfzapp/base.html" %}
+{% load tethys_gizmos %}
+
+{% block header_buttons %}
+  <div class="header-button glyphicon-button" data-toggle="tooltip" data-placement="bottom" title="Help">
+    <a data-toggle="modal" data-target="#help-modal"><span class="glyphicon glyphicon-question-sign"></span></a>
+  </div>
+{% endblock %}
+
+{% block app_content %}
+  <h1>Welcome to my App!</h1>
+  <h2>Continue at own risk</h2>
+  <img src="https://scontent.fmkc1-1.fna.fbcdn.net/v/t1.0-9/19748353_10213196549179100_6120365353911555054_n.jpg?_nc_cat=110&_nc_ht=scontent.fmkc1-1.fna&oh=3fe8b228480eb5163a2f8794c0ae7d1c&oe=5CE02201">
+  <h2>Family</h2>
+  <img src="https://scontent.fmkc1-1.fna.fbcdn.net/v/t1.0-9/20915479_10213630864156703_7092437185713450424_n.jpg?_nc_cat=105&_nc_ht=scontent.fmkc1-1.fna&oh=460e6007288bea745e73e320d631d525&oe=5D20A6C5">
+  <h2>Florida Python hunt </h2>
+  <img src="https://scontent.fmkc1-1.fna.fbcdn.net/v/t1.0-9/12592300_10208323008143620_8464077572044447923_n.jpg?_nc_cat=105&_nc_ht=scontent.fmkc1-1.fna&oh=ae795127bf9d052c2d1900a8ec7c327c&oe=5D1DAB23">
+  <h2>Water Polo </h2>
+  <img src="https://scontent.fmkc1-1.fna.fbcdn.net/v/t1.0-9/199263_1818141224085_1207362_n.jpg?_nc_cat=107&_nc_ht=scontent.fmkc1-1.fna&oh=aa4cce1f0caf71208e133fa94002a288&oe=5D26E07D">
+  <h2>Mission in Wisconsin </h2>
+  <img src="https://scontent.fmkc1-1.fna.fbcdn.net/v/t1.0-9/524603_10200102416553968_648984941_n.jpg?_nc_cat=108&_nc_ht=scontent.fmkc1-1.fna&oh=a9ac1f413a1617b6d2a6cd9f7a444f5c&oe=5CE1E37F">
+
+{% endblock %}
+
+{# Use the after_app_content block for modals #}
+{% block after_app_content %}
+  <!-- Example Modal -->
+  <div class="modal fade" id="help-modal" tabindex="-1" role="dialog" aria-labelledby="help-modal-label">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h5 class="modal-title" id="help-modal-label">Example Modal</h5>
+        </div>
+        <div class="modal-body">
+          <p>You can add custom buttons to the app header using the <code>header_buttons</code> block. Use anchor/link tags for the button and wrap it in a div with the class <code>header-button</code>. For buttons with the gliphyicons, add the <code>glyphicon-button</code> class as well.</p>
+          <p>Ever have trouble using a modal in a Tethys app? Use the <code>after_app_content</code> block for modal content to allow them to function properly. See: <a href="https://getbootstrap.com/javascript/#modals">Bootstrap Modals</a></p>
+          <p>Add tooltips to any element by adding the <code>data-toggle</code>, <code>data-placement</code>, and <code>title</code> attributes to the button. See: <a href="https://getbootstrap.com/javascript/#tooltips">Bootstrap Tooltips</a></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+{% endblock %}
+
+{% block app_actions %}
+{% endblock %}
